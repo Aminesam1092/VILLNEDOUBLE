@@ -7,58 +7,66 @@
 }
 a{
     text-decoration: none;
-    color: v.$Font__Color;
+    color: black;
     a:active{
-        color: v.$Font__Color;
+        color: black;
     }
     a:focus{
         outline: none;
     }
 }
+body{
+    width: 100%;
+}
 .Header{
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
-
-        .Header__Left{
-            margin: 10px 0px 0px 40px;
+    justify-content: center;
+    font-family: 'Merriweather', serif;
+    &__LogoImage{
+        margin-right: auto;
+        margin-left: 40px;
+    }
+    &__Menu{
+        display: flex;
+        font-size: 17px;
+        margin-left: 600px;
+        margin-right: 69.5px;
+        margin-top: 20px;
+    }
+    &__List{
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    &__Snslink{
+        width: 200px;
+        height: 20px;
+        font-size: 12px;
+        margin-top: 22px;
+        margin-right: 126px;
+        display: flex;
+        align-items: center;
+        &__Border{
+            cursor: pointer;
+            width: 100px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-right: 1px solid v.$Color__Main__Black;
         }
-        .Header__Right{
-            width: 700px;
-            height: 60px;
-            margin: 10px 170px 0px 0px;
-            line-height: 60px;
-            margin-left: auto;
-        
-                .Header__Right__MainConteiner{
-                    display: flex;
-                    .Header__Link{
-                        font-size: 18px;
-                        margin-left: 25px;
-                        font-family: 'Merriweather', serif;
-                    }
-                    .Header__Link-Externallink{
-                        margin-left: 25px;
-                        font-size: 13px;
-                        font-family: 'Merriweather', serif;
-                    }
-                }
-                .Header__Right__Navuser{
-                    display: flex;
-                }
-                    #Border{
-                        margin-top: 20px;
-                        width: 1.5px;
-                        height: 20px;
-                        background-color: $Color__Main__Black;
-                    }
-                    #InstagramIcon{
-                        padding-top: 5px;
-                    }
+        &--Instagram{
+            height: 20px;
+            margin-left: 20px;
+            display: inline-block;
         }
+    }
 }
 .BigSliderconteiner{
     .BigSliderconteiner__Maingraphic{
+        padding-top: 25px;
         .Maingraphic__SliderImages{
-            width: v.$Images__Width;
+            width: 100%;
         }
     }
 }

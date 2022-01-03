@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a a:active {
+  color: black;
+}
+a a:focus {
+  outline: none;
+}
+
+.Header {
+  display: flex;
+}
+.Header .Header__Left {
+  margin: 10px 0px 0px 40px;
+}
+.Header .Header__Right {
+  width: 700px;
+  height: 60px;
+  margin: 10px 170px 0px 0px;
+  line-height: 60px;
+  margin-left: auto;
+}
+.Header .Header__Right .Header__Right__MainConteiner {
+  display: flex;
+}
+.Header .Header__Right .Header__Right__MainConteiner .Header__Link {
+  font-size: 18px;
+  margin-left: 25px;
+  font-family: "Merriweather", serif;
+}
+.Header .Header__Right .Header__Right__MainConteiner .Header__Link-Externallink {
+  margin-left: 25px;
+  font-size: 13px;
+  font-family: "Merriweather", serif;
+}
+.Header .Header__Right .Header__Right__Navuser {
+  display: flex;
+}
+.Header .Header__Right #Border {
+  margin-top: 20px;
+  width: 1.5px;
+  height: 20px;
+  background-color: red;
+}
+.Header .Header__Right #InstagramIcon {
+  padding-top: 5px;
+}
+
+.BigSliderconteiner .BigSliderconteiner__Maingraphic {
+  padding-top: 25px;
+}
+.BigSliderconteiner .BigSliderconteiner__Maingraphic .Maingraphic__SliderImages {
+  width: 100%;
+}
+
+.text {
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */
