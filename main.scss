@@ -1,37 +1,25 @@
-@use "variables" as v;
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-a{
-    text-decoration: none;
-    color: black;
-    a:active{
-        color: black;
-    }
-    a:focus{
-        outline: none;
-    }
-}
+@use "scss/foundation/variables" as v;
+@use "scss/foundation/base" as b;
+@use "scss/foundation/font" as f;
+@use "scss/Animation/Animation.scss" as a;
 .Header{
     width: 100%;
-    margin-top: 20px;
+    padding-top: 20px;
     margin-bottom: 20px;
     white-space: nowrap;
+    font-weight: 500;
     display: flex;
     justify-content: center;
-    font-family: 'Merriweather', serif;
+    font-family: f.$FontFamily;
     &__LogoImage{
+        min-width: 0;
         margin-right: auto;
         margin-left: 40px;
     }
     &__Menu{
-        width: 100%;
+        min-width: 0;
         display: flex;
         font-size: 17px;
-        margin-left: 600px;
-        margin-right: 69.5px;
         margin-top: 20px;
     }
     &__List{
@@ -40,11 +28,12 @@ a{
         list-style-type: none;
     }
     &__Snslink{
-        width: 200px;
+        min-width: 0;
         height: 20px;
         font-size: 12px;
         margin-top: 22px;
         margin-right: 126px;
+        padding-top: 5px;
         display: flex;
         list-style-type: none;
         align-items: center;
@@ -65,10 +54,40 @@ a{
 }
 .swiper-container{
     .swiper-wrapper{
-        padding-top: 40px;
         .Maingraphic__Images{
             width: 100%;
             height: 100%;
         }
+    }
+}
+.NEWSCAMPAINconteiner{
+    margin-top: 290px;
+    margin-left: 18%;
+    transition:  a.$FeedAnimation;
+    opacity: 0;
+    &__Headingtext{
+        font-family: f.$FontFamily;
+        font-size: f.$BaseFontsize;
+        font-weight: f.$BaseFontWight;
+    }
+    &__Logo{
+        margin-top: 63px;
+        margin-left: 4%;
+    }
+    &__Amendment{
+        font-family: f.$FontFamily;
+    }
+    &__Text{
+        display: inline-block;
+        line-height: f.$Baseline-height;
+        border-bottom: v.$BaseBorder;
+        font-weight: f.$BaseFontWight;
+    }
+    &__Time{
+        display: block;
+        margin-top: 10px;
+        font-size: 18px;
+        font-family: f.$FontFamily;
+        font-weight: f.$BaseFontWight;
     }
 }
