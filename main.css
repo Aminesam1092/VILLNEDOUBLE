@@ -1,3 +1,4 @@
+@use "variables" as v;
 * {
   padding: 0;
   margin: 0;
@@ -38,6 +39,18 @@ a a:focus {
   display: flex;
 }
 
+.Header .Header__Right .Header__Right__MainConteiner .Header__Link {
+  font-size: 18px;
+  margin-left: 25px;
+  font-family: 'Merriweather', serif;
+}
+
+.Header .Header__Right .Header__Right__MainConteiner .Header__Link-Externallink {
+  margin-left: 25px;
+  font-size: 13px;
+  font-family: 'Merriweather', serif;
+}
+
 .Header .Header__Right .Header__Right__Navuser {
   display: flex;
 }
@@ -53,70 +66,10 @@ a a:focus {
   padding-top: 5px;
 }
 
-.Header__Link {
-  font-size: 18px;
-  margin-left: 25px;
-  font-family: 'Merriweather', serif;
+.BigSliderconteiner .BigSliderconteiner__Maingraphic {
+  padding-top: 25px;
 }
 
-.Header__Link-Externallink {
-  margin-left: 25px;
-  font-size: 13px;
-  font-family: 'Merriweather', serif;
-}
-
-.Bigsliderconteiner {
-  padding-top: 80px;
-  display: flex;
-  justify-content: end;
-}
-
-.Bigsliderconteiner .Maingraphic {
-  color: white;
-  background-color: black;
-}
-
-.Bigsliderconteiner .Maingraphic .Maingraphic__Catchcopy {
-  position: relative;
-  right: 265px;
-  margin-top: 150px;
-  font-size: 120px;
-  display: block;
-  font-family: 'Lora', serif;
-}
-
-.Bigsliderconteiner .Maingraphic .Maingraphic__Catchcopy .TextChangecolor {
-  margin-left: 1px;
-  color: black;
-}
-
-.Bigsliderconteiner .Maingraphic__Catchcopy__Subtext {
-  width: 999px;
-  margin-left: auto;
-  color: white;
-  font-size: 38px;
-  font-family: 'Lora', serif;
-}
-
-.Bigsliderconteiner .Maingraphic__Catchcopy__Subtext .Indention {
-  margin-left: 10px;
-  display: block;
-}
-
-.Bigsliderconteiner #IndentionLeft {
-  margin-left: 260px;
-}
-
-.Bigsliderconteiner #IndentionLeft__Secondchild {
-  margin-left: 520px;
-}
-
-.Maingraphic__PictureConteiner {
-  width: 551px;
-  height: 738px;
-}
-
-.Maingraphic__PictureConteiner .Maingraphic__PictureConteiner--Picture {
+.BigSliderconteiner .BigSliderconteiner__Maingraphic .Maingraphic__SliderImages {
   width: 100%;
-  height: 100%;
 }

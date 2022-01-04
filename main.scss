@@ -14,9 +14,6 @@ a{
         outline: none;
     }
 }
-body{
-    width: 100%;
-}
 .Header{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -28,7 +25,7 @@ body{
         margin-left: 40px;
     }
     &__Menu{
-        width: 500px;
+        width: 100%;
         display: flex;
         font-size: 17px;
         margin-left: 600px;
@@ -64,10 +61,10 @@ body{
         }
     }
 }
-.BigSliderconteiner{
-    .BigSliderconteiner__Maingraphic{
+.swiper-container{
+    .swiper-wrapper{
         padding-top: 25px;
-        .Maingraphic__SliderImages{
+        .Maingraphic__Images{
             width: 100%;
         }
     }
