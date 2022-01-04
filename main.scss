@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    list-style: none;
 }
 a{
     text-decoration: none;
@@ -29,6 +28,7 @@ body{
         margin-left: 40px;
     }
     &__Menu{
+        width: 500px;
         display: flex;
         font-size: 17px;
         margin-left: 600px;
@@ -38,6 +38,7 @@ body{
     &__List{
         margin: 0 10px;
         cursor: pointer;
+        list-style-type: none;
     }
     &__Snslink{
         width: 200px;
@@ -46,6 +47,7 @@ body{
         margin-top: 22px;
         margin-right: 126px;
         display: flex;
+        list-style-type: none;
         align-items: center;
         &__Border{
             cursor: pointer;
