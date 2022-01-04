@@ -15,8 +15,10 @@ a{
     }
 }
 .Header{
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+    white-space: nowrap;
     display: flex;
     justify-content: center;
     font-family: 'Merriweather', serif;
@@ -63,9 +65,10 @@ a{
 }
 .swiper-container{
     .swiper-wrapper{
-        padding-top: 25px;
+        padding-top: 40px;
         .Maingraphic__Images{
             width: 100%;
+            height: 100%;
         }
     }
 }
