@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="scss/main.min.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/Swipercss/swiper.min.css">
+    <link rel="stylesheet" href="scss/TextAnimation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+
     <title>VillNeDouble</title>
 </head>
 
@@ -18,7 +22,7 @@
         </h1>
         <ul class="Header__Menu">
             <li class="Header__List"><a class="Header__Link" href="#NEWS&CAMPAIN">NEWS & CAMPAIN</a></li>
-            <li class="Header__List"><a class="Header__Link" id="OURSTORY">OUR STORY</a></li>
+            <li class="Header__List"><a class="Header__Link" href="#OURSTORY">OUR STORY</a></li>
             <li class="Header__List"><a class="Header__Link" id="PICKUP">PICK UP</a></li>
             <li class="Header__List"><a class="Header__Link" id="LINEUP">LINE UP</a></li>
         </ul>
@@ -30,9 +34,9 @@
     <main class="MainPrimary">
         <section class="swiper-container">
             <section class="swiper-wrapper">
-                <h1 class="swiper-slide"><img class="Maingraphic__Images" src="WebP/SliderImages.webp" width="1836" height="738" alt="グラフィック画像"></h1>
-                <h1 class="swiper-slide"><img class="Maingraphic__Images" src="WebP/SliderimagesSecond.webp" width="1836" height="738" alt="グラフィック画像"></h1>
-                <h1 class="swiper-slide"><img class="Maingraphic__Images" src="WebP/SliderImagesThrd.webp" width="1836" height="738" alt="グラフィック画像"></h1>
+                <h1 class="swiper-slide"><img id="Maingraphic__Image" src="WebP/SlideImages/SliderImage.webp" width="1836" height="738" alt="グラフィック画像"></h1>
+                <h1 class="swiper-slide"><img id="Maingraphic__Image" src="WebP/SlideImages/SliderimageSecond.webp" width="1836" height="738" alt="グラフィック画像"></h1>
+                <h1 class="swiper-slide"><img id="Maingraphic__Image" src="WebP/SlideImages/SliderImageThrd.webp" width="1836" height="738" alt="グラフィック画像"></h1>
             </section>
         </section>
         <section class="NEWSCAMPAINconteiner">
@@ -44,12 +48,37 @@
                     </aside>
                     <time class="NEWSCAMPAINconteiner__Time">2021 6.24</time>
             </section>
-            <button class="NEWSCAMPAINconteiner__Button"></button>
+            <button class="NEWSCAMPAINconteiner__Button">VIEW ALL</button>
+        </section>
+        <h1 class="OURSTORY__Headingtext"><a id="OURSTORY">OURSTORY</a></h1>
+        <section class="OURSTORYconteiner">
+            <h2 class="OURSTORYconteiner__Catchcopy"><span class="Catchcopynewline">For everyone</span><span class="Catchcopynewline">Whose fashion has Made</span><span class="Catchcopynewline" id="Textleft">Life Fun</span></h2>
+            <section class="OURSTORYconteiner__Twocontents">
+                <section class="OURSTORYconteiner__Leftconteiner">
+                <h1 class="OURSTORYconteiner__Catchimage"><img id="graphic__Image" src="WebP/ViewImages/Model.webp" width="1148" height="1162" alt="VillNeDoubleのキャッチ画像"></h1>
+                <p class="OURSTORYconteiner__Text"><span class="Newline">For all fashion lovers</span><span class="Newline">we want to provide our customers with a better product design</span><span class="Newline">perfect texture and the finest finish.</span></p>
+                <p class="OURSTORYconteiner__Text--Second"><span class="Newline">We,would like to devote myself to designing products</span><span class="Newline">that women can wear comfortably</span><span class="Newline">that it is fun to come and that I can think that I can shine so much.</span></p>
+                </section>
+                <section class="OURSTORYconteiner__Rightconteiner">
+                <h1 class="OURSTORYconteiner__Logo"><img id="Maingraphic__Logo" src="Logo/TexureText.svg" width="300" height="84" alt="VillNeDoubleのロゴ"></h1>
+                <p class="OURSTORYconteiner__Establishedtime">Established in <time>1999</time></p>
+                </section>
+            </section>
+            <section class="OURSTORYconteiner__Brandeintroductory">
+                <section class="OURSTORYconteiner__Brandeintroductory__Lefbox">
+                <h1 class="OURSTORYconteiner__Brandeintroductory__Brandename">Villne Double</h1>
+                <p class="OURSTORYconteiner__Brandeintroductory__Text"><span class="Newline">VilleDouble</span><span class="Newline">We are a brand company that designs fashion</span><span class="Newline">Established in 1999,</span><span class="Newline">we have received support and words of joy from our customers.</span><span class="Newline">We are the design dress that our customers want</span><span class="Newline">We are making design suits.</span></p>
+            </section>
+            <h1 class="OURSTORYconteiner__Catchsecondimage"><img id="Catchimage" src="WebP/ViewImages/SecondModel.webp" width="1056" height="1508" alt="VillNeDoubleのキャッチ画像"></h1>
+            </section>
         </section>
     </main>
     <script src="JS/SwiperJS/swiper.min.js"></script>
+    <script src="JS/ParallaxJS/simpleParallax.min.js"></script>
+    <script src="JS/ParallaxJS/Parallax.js"></script>
     <script src="JS/SwiperJS/Slider.js"></script>
     <script src="JS/TriggerJS/Trigger.js"></script>
+    <script src="JS/TriggerJS/Scrolltrigger.js"></script>
 </body>
 
 </html>
