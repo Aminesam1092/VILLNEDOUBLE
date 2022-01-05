@@ -1,5 +1,4 @@
-const FeedIn = document.querySelector('.NEWSCAMPAINconteiner');//見せたい要素の取得
-
+const FeedIn = document.querySelector('.NEWSCAMPAINconteiner');
 
 FeedIn.getBoundingClientRect().top + window.pageYOffset;
 window.addEventListener('scroll' , function(){
