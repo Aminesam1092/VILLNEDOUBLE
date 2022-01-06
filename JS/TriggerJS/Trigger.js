@@ -5,6 +5,5 @@ window.addEventListener('scroll' , function(){
     if(window.pageYOffset > FeedIn.getBoundingClientRect().top + window.pageYOffset - window.innerHeight + 100){
         FeedIn.style.opacity = '1';
     }
-    console.log('scroll');
 });
 console.log(window.pageYOffset);

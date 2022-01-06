@@ -3,6 +3,7 @@
 @use "scss/foundation/font" as f;
 @use "scss/Animation/Animation.scss" as a;
 @use "scss/Animation/TextAnimation.scss" as t;
+@use "scss/mixin/breakpoint" as break;
 .Header{
     width: 100%;
     padding-top: 20px;
@@ -14,8 +15,7 @@
     font-family: f.$FontFamily;
     &__LogoImage{
         min-width: 0;
-        margin-right: auto;
-        margin-left: 40px;
+        margin: 0 auto 0 40px;
     }
     &__Menu{
         min-width: 0;
@@ -52,67 +52,154 @@
             display: inline-block;
         }
     }
+    .Header__Hambugur{
+        width: 40px;
+        height: 40px;
+    }
 }
 .swiper-container{
     margin-top: 30px;
+    @include break.breakpoint(smartphone){
+        display: none;
+    }
 }
 .NEWSCAMPAINconteiner{
+    width: 100%;
     margin-top: 290px;
-    margin-left: v.$BaseHeaddingMargin;
     transition:  a.$FeedAnimation;
     font-family: f.$FontFamily;
     opacity: 0;
+    @include break.breakpoint(smartphone){
+        margin-top: 70px;
+        opacity: 1;
+    }
+    &__Explanation{
+        @include break.breakpoint(smartphone){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+        }
+    }
     &__Headingtext{
-        font-size: f.$BaseHeadingFontSize;
+        font-size: 5rem;
         font-weight: f.$BaseFontWight;
+        margin-left: 18%;
+        @include break.breakpoint(smartphone){
+            width: 80%;
+            font-size: 25px;
+        }
     }
     &__Logo{
+        width: 282px;
         margin-top: 63px;
-        margin-left: 4%;
+        margin-left: 18%;
+        @include break.breakpoint(smartphone){
+            width: 50%;
+            margin-top: 25px;
+            margin-left: 0;
+            margin-bottom: 25px;
+        }
     }
     &__Text{
         display: inline-block;
+        font-size: f.$BaseFontsize;
         line-height: f.$Baseline-height;
         font-weight: f.$BaseFontWight;
+        padding-top: 12px;
+        @include break.breakpoint(smartphone){
+            font-size: 11px;
+        }
+    }
+    &__Amendment{
+        margin-left: 18%;
+        @include break.breakpoint(smartphone){
+            width: 80%;
+            text-align: center;
+            margin-left: 0;
+        }
     }
     &__Time{
         display: block;
         margin-top: 10px;
+        margin-left: 18%;
         font-size: f.$BaseTextSize;
         font-weight: f.$BaseFontWight;
+        @include break.breakpoint(smartphone){
+            width: 80%;
+            text-align: center;
+            margin-left: 0;
+            font-size: 11px;
+        }
     }
-    &__Button{
+    &__Newline{
+        display: inline-block;
+    }
+     &__Button{
         width: 290px;
         height: 70px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 120px;
-        margin-left: 30.5%;
         font-family: f.$FontFamily;
         border: v.$BaseBorder;
         font-size: f.$BaseTextSize;
+        @include break.breakpoint(smartphone){
+            margin-top: 25px;
+        }
     }
 }
 .OURSTORY__Headingtext{
+        width: 150px;
         margin-top: 200px;
+        margin-left: 18%;
         font-family: f.$FontFamily;
-        margin-left: v.$BaseHeaddingMargin;
         font-size: f.$BaseHeadingFontSize;
         font-weight: f.$BaseFontWight;
         opacity: 0;
+        @include break.breakpoint(smartphone){
+            width: 100%;
+            text-align: center;
+            margin-left: 0;
+            margin-top: 25px;
+        }
+}
+.OURSTORY__Catchcopy{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: inline-block;
+    font-size: f.$BaseHeadingFontSize;
+    font-family: f.$FontFamily;
+    line-height: f.$Baseline-height;
+    opacity: 0;
+    @include break.breakpoint(smartphone){
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 200px;
+        font-size: 25px;
+    }
+    @include break.breakpoint(tablet){
+        font-size: 30px;
+    }
+    .Catchcopynewline{
+        display: block;
+        margin-top: 50px;
+        @include break.breakpoint(tablet){
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        @include break.breakpoint(smartphone){
+            margin-top: 30px;
+        }
+    }
 }
 .OURSTORYconteiner{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     font-family: f.$FontFamily;
-    &__Catchcopy{
-        margin-top: 20px;
-        margin-bottom: 40px;
-        margin-left: 50%;
-        font-size: f.$BaseHeadingFontSize;
-        display: inline-block;
-        line-height: f.$Baseline-height;
-        opacity: 0;
-    }
     &__Twocontents{
         display: flex;
     }
@@ -136,7 +223,7 @@
         font-size: f.$BaseFontsize;
     }
     &__Logo{
-        width: 500px;
+        //width: 500px;
         padding-top: 50%;
     }
     &__Establishedtime{

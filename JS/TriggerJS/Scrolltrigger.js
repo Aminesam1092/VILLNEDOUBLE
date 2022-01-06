@@ -10,9 +10,9 @@ gsap.to(".OURSTORY__Headingtext",{
     opacity: 1,
 });
 
-gsap.to(".OURSTORYconteiner__Catchcopy",{
+gsap.to(".OURSTORY__Catchcopy",{
     scrollTrigger: {
-        trigger: ".OURSTORYconteiner__Catchcopy",
+        trigger: ".OURSTORY__Catchcopy",
         start: "top center",
         end: '+=2000',
         scrub: true,
