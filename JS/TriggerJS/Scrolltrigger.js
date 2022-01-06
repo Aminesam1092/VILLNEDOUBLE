@@ -2,7 +2,7 @@ gsap.to(".OURSTORY__Headingtext",{
     scrollTrigger: {
         trigger: ".OURSTORY__Headingtext",
         start: "top center",
-        end: '+=1500',
+        end: '+=2000',
         scrub: true,
         pin: true,
     },
@@ -14,7 +14,7 @@ gsap.to(".OURSTORYconteiner__Catchcopy",{
     scrollTrigger: {
         trigger: ".OURSTORYconteiner__Catchcopy",
         start: "top center",
-        end: '+=1500',
+        end: '+=2000',
         scrub: true,
         pin: true,
     },
