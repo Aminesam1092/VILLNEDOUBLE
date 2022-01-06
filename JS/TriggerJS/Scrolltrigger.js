@@ -21,6 +21,3 @@ gsap.to(".OURSTORYconteiner__Catchcopy",{
     duraion: 5,
     opacity: 1,
 });
-
-
-

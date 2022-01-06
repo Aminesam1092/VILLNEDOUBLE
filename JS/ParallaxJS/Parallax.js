@@ -1,12 +1,12 @@
-const image = document.getElementsByClassName('OURSTORYconteiner__Catchsecondimage');
-const secondimage = document.getElementsByClassName('OURSTORYconteiner__Catchimage');
+const iae = document.getElementsByClassName('OURSTORYconteiner__Catchimage');
+const seondimage = document.getElementsByClassName('OURSTORYconteiner__Catchsecondimage');
 
-new simpleParallax(image, {
+new simpleParallax(iage, {
     overflow: true,
     orientation: 'left'
 });
 
-new simpleParallax(secondimage, {
+new simpleParallax(seodimage, {
     overflow: true,
     orientation: 'right'
 });
