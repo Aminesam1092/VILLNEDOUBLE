@@ -53,6 +53,9 @@
         }
     }
 }
+.swiper-container{
+    margin-top: 30px;
+}
 .NEWSCAMPAINconteiner{
     margin-top: 290px;
     margin-left: v.$BaseHeaddingMargin;
@@ -94,7 +97,7 @@
         margin-left: v.$BaseHeaddingMargin;
         font-size: f.$BaseHeadingFontSize;
         font-weight: f.$BaseFontWight;
-        opacity: 1;
+        opacity: 0;
 }
 .OURSTORYconteiner{
     width: 100%;
@@ -108,6 +111,7 @@
         font-size: f.$BaseHeadingFontSize;
         display: inline-block;
         line-height: f.$Baseline-height;
+        opacity: 0;
     }
     &__Twocontents{
         display: flex;
