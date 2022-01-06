@@ -6,7 +6,7 @@
     }
 
     @if $point==smartphone {
-        @media (max-width: 400px) {//パソコン用
+        @media (max-width: 450px) {//スマートフォン用
             @content;
         }
     }
