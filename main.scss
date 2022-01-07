@@ -269,7 +269,6 @@
     margin-top: 50px;
     display: flex;
     opacity: 0;
-    padding-bottom: 1000px;
     &__Lefbox{
         text-align: center;
         width: 800px;
@@ -283,6 +282,7 @@
         display: block;
         text-align: center;
         font-size: f.$BaseHeadingFontSize;
+        font-weight: f.$TextFontWight;
         opacity: 0;
     }
     &__Text{
@@ -290,10 +290,12 @@
         text-align: left;
         font-size: f.$BaseFontsize;
         font-weight: f.$TextFontWight;
+        opacity: 0;
         @include break.breakpoint(smartphone){
             font-size: f.$ResponsiveFontSize;
             text-align: center;
             margin: 20px;
+            font-weight: f.$TextFontWight;
         }
     }
 }
@@ -304,5 +306,54 @@
     margin-left: 10%;
     @include break.breakpoint(smartphone){
         display: none;
+    }
+}
+.Productconteiner{
+    margin-top: 200px;
+    margin-bottom: 1000px;
+    font-family: f.$FontFamily;
+    display: flex;
+    margin-left: 10%;
+    @include break.breakpoint(smartphone){
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__Image{
+        width: 30%;
+        height: 30%;
+        opacity: 0;
+        filter: drop-shadow(v.$BaseBoxShadow);
+        @include break.breakpoint(smartphone){
+            width: 80%;
+            height: 80%;
+        }
+    }
+    &__Productcontents{
+        margin-left: 5%;
+        padding-top: 50px;
+    }
+    &__Headingtext{
+        font-size: f.$BaseFontsize;
+        font-weight: f.$TextFontWight;
+    }
+    &__Catchcopy{
+        font-size: f.$BaseHeadingFontSize;
+        font-weight: f.$TextFontWight;
+        @include break.breakpoint(smartphone){
+            font-size: 35px;
+        }
+    }
+    &__Text{
+        padding-top: 50px;
+        font-size: f.$BaseFontsize;
+        font-weight: f.$TextFontWight;
+        opacity: 0;
+        @include break.breakpoint(smartphone){
+            font-size: f.$ResponsiveFontSize;
+            text-align: center;
+            margin: 20px;
+        }
     }
 }

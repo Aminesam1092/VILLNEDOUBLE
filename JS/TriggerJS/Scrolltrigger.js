@@ -68,3 +68,36 @@ gsap.to(".OURSTORYconteiner__Brandeintroductory",{
     duraion: 5,
     opacity: 1,
 });
+
+gsap.to(".OURSTORYconteiner__Brandeintroductory__Text",{
+    scrollTrigger: {
+        trigger: ".OURSTORYconteiner__Brandeintroductory__Text",
+        start: "top center",
+    },
+    duraion: 5,
+    opacity: 1,
+});
+
+gsap.to(".Productconteiner__Image",{
+    scrollTrigger: {
+        trigger: ".Productconteiner__Image",
+        start: "top center",
+        end: "+=300",
+        scrub: true,
+    },
+    duraion: 5,
+    opacity: 1,
+})
+
+gsap.to(".Productconteiner__Text",{
+    scrollTrigger: {
+        trigger: ".Productconteiner__Text",
+        start: "top center",
+        end: "+=500",
+        scrub: true,
+    },
+    duraion: 5,
+    opacity: 1,
+})
+
+
