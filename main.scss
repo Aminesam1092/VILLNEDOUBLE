@@ -237,14 +237,14 @@
             @include break.breakpoint(smartphone){
                 text-align: center;
                 padding: 0;
-                margin: 0;
+                margin: 20px;
                 font-weight: f.$TextFontWight;
             }
         }
         @include break.breakpoint(smartphone){
             text-align: center;
             padding-top: 100px;
-            margin: 0;
+            margin: 20px;
             font-weight: f.$TextFontWight;
         }
     }
@@ -269,6 +269,7 @@
     margin-top: 50px;
     display: flex;
     opacity: 0;
+    padding-bottom: 1000px;
     &__Lefbox{
         text-align: center;
         width: 800px;
@@ -279,11 +280,10 @@
         }
     }
     &__Brandename{
-        margin-top: 140px;
         display: block;
         text-align: center;
         font-size: f.$BaseHeadingFontSize;
-        opacity: 1;
+        opacity: 0;
     }
     &__Text{
         margin-top: 15%;
@@ -293,6 +293,7 @@
         @include break.breakpoint(smartphone){
             font-size: f.$ResponsiveFontSize;
             text-align: center;
+            margin: 20px;
         }
     }
 }
