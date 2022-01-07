@@ -82,8 +82,6 @@ gsap.to(".Productconteiner__Image",{
     scrollTrigger: {
         trigger: ".Productconteiner__Image",
         start: "top center",
-        end: "+=300",
-        scrub: true,
     },
     duraion: 5,
     opacity: 1,
