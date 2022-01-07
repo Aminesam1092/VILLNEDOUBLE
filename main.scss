@@ -55,6 +55,7 @@
     .Header__Hambugur{
         width: 40px;
         height: 40px;
+        margin-right: 10px;
     }
 }
 .swiper-container{
@@ -87,7 +88,9 @@
         margin-left: 18%;
         @include break.breakpoint(smartphone){
             width: 80%;
-            font-size: 25px;
+            font-size: 30px;
+            margin-left: 0;
+            text-align: center;
         }
     }
     &__Logo{
@@ -108,7 +111,7 @@
         font-weight: f.$BaseFontWight;
         padding-top: 12px;
         @include break.breakpoint(smartphone){
-            font-size: 11px;
+            font-size: f.$ResponsiveFontSize;
         }
     }
     &__Amendment{
@@ -129,7 +132,7 @@
             width: 80%;
             text-align: center;
             margin-left: 0;
-            font-size: 11px;
+            font-size: f.$ResponsiveFontSize;
         }
     }
     &__Newline{
