@@ -14,9 +14,7 @@ gsap.to(".OURSTORY__Catchcopy",{
     scrollTrigger: {
         trigger: ".OURSTORY__Catchcopy",
         start: "top center",
-        end: '+=2000',
         scrub: true,
-        pin: true,
     },
     duraion: 5,
     opacity: 1,
@@ -25,18 +23,18 @@ gsap.to(".OURSTORY__Catchcopy",{
 gsap.to(".OURSTORYconteiner__Twocontents",{
     scrollTrigger: {
         trigger: ".OURSTORYconteiner__Twocontents",
-        start: "",
+        start: "top center",
         end: '+=1000',
         scrub: true,
     },
-    duraion: 10,
+    duraion: 1,
     opacity: 1,
 });
 
 gsap.to(".OURSTORYconteiner__Brandeintroductory",{
     scrollTrigger: {
         trigger: ".OURSTORYconteiner__Brandeintroductory",
-        start: "",
+        start: "top center",
         end: '+=1000',
         scrub: true,
     },
