@@ -171,6 +171,7 @@
 .OURSTORY__Catchcopy{
     margin-top: 20px;
     margin-bottom: 40px;
+    margin-left: 18%;
     display: inline-block;
     font-size: f.$BaseHeadingFontSize;
     font-family: f.$FontFamily;
@@ -205,6 +206,10 @@
     font-family: f.$FontFamily;
     &__Twocontents{
         display: flex;
+        opacity: 0;
+        @include break.breakpoint(smartphone){
+            display: block;
+        }
     }
     &___Rightconteiner{
         width: 100%;
@@ -212,50 +217,80 @@
     &__Catchimage{
         filter: drop-shadow(v.$BaseBoxShadow);
         margin-left: v.$TextMargin;
+        @include break.breakpoint(smartphone){
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     &__Text{
         padding-top: 20px;
         font-weight: f.$TextFontWight;
         margin-left: v.$TextMargin;
         font-size: f.$BaseFontsize;
-    }
-    &__Text--Second{
-        padding-top: 20px;
-        font-weight: f.$TextFontWight;
-        margin-left: v.$TextMargin;
-        font-size: f.$BaseFontsize;
+        &--Second{
+            padding-top: 20px;
+            font-weight: f.$TextFontWight;
+            margin-left: v.$TextMargin;
+            font-size: f.$BaseFontsize;
+            @include break.breakpoint(smartphone){
+                text-align: center;
+                padding: 0;
+                margin: 0;
+                font-weight: f.$TextFontWight;
+            }
+        }
+        @include break.breakpoint(smartphone){
+            text-align: center;
+            padding-top: 100px;
+            margin: 0;
+            font-weight: f.$TextFontWight;
+        }
     }
     &__Logo{
-        //width: 500px;
-        padding-top: 50%;
+        width: 100%;
+        padding-top: 60%;
     }
     &__Establishedtime{
         text-align: center;
         font-family: f.$FontFamily;
         font-weight: 900;
+        font-size: 25px;
     }
+}
+.Newline{
+    display: block;
 }
 .OURSTORYconteiner__Brandeintroductory{
     width: 100%;
     margin-top: 50px;
     display: flex;
+    opacity: 0;
     &__Lefbox{
         text-align: center;
         width: 800px;
         margin-top: 10%;
         margin-left: 10%;
+        @include break.breakpoint(smartphone){
+            margin-left: 0;
+        }
     }
     &__Brandename{
         margin-top: 140px;
         display: block;
         text-align: center;
         font-size: f.$BaseHeadingFontSize;
+        opacity: 1;
     }
     &__Text{
         margin-top: 15%;
         text-align: left;
         font-size: f.$BaseFontsize;
         font-weight: f.$TextFontWight;
+        @include break.breakpoint(smartphone){
+            font-size: f.$ResponsiveFontSize;
+        }
     }
 }
 .OURSTORYconteiner__Catchsecondimage{
@@ -263,4 +298,7 @@
     width: 600px;
     height: 100%;
     margin-left: 10%;
+    @include break.breakpoint(smartphone){
+        display: none;
+    }
 }
