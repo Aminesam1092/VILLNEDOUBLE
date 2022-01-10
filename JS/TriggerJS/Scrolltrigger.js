@@ -103,3 +103,14 @@ gsap.to(".Productconteiner__Text",{
     duraion: 5,
     opacity: 1,
 })
+
+gsap.to(".PickUpConteiner__Headingtext",{
+    scrollTrigger: {
+        trigger: ".PickUpConteiner__Headingtext",
+        start: "top center",
+        end: '+=2000',
+        scrub: true,
+        pin: true,
+    },
+    opacity: 1,
+});
