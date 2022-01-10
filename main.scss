@@ -63,6 +63,9 @@
     @include break.breakpoint(smartphone){
         display: none;
     }
+    @include break.breakpoint(tablet){
+        display: none;
+    }
 }
 .NEWSCAMPAINconteiner{
     width: 100%;
@@ -186,9 +189,6 @@
         margin-top: 200px;
         font-size: 25px;
     }
-    @include break.breakpoint(tablet){
-        font-size: 30px;
-    }
     .Catchcopynewline{
         display: block;
         margin-top: 50px;
@@ -210,6 +210,9 @@
         display: flex;
         opacity: 0;
         @include break.breakpoint(smartphone){
+            display: block;
+        }
+        @include break.breakpoint(tablet){
             display: block;
         }
     }
@@ -316,6 +319,9 @@
     @include break.breakpoint(smartphone){
         display: none;
     }
+    @include break.breakpoint(tablet){
+        display: none;
+    }
 }
 .Productconteiner{
     margin-top: 200px;
@@ -376,8 +382,8 @@
         font-weight: f.$TextFontWight;
     }
     &__ParallaxanimationFirst{
-        width: 50%;
-        height: 50%;
+        width: 60%;
+        height: 60%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -391,8 +397,8 @@
         }
     }
     &__ParallaxanimationSecond{
-        width: 50%;
-        height: 50%;
+        width: 60%;
+        height: 60%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -406,8 +412,8 @@
         }
     }
     &__ParallaxanimationThrd{
-        width: 50%;
-        height: 50%;
+        width: 60%;
+        height: 60%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -421,8 +427,8 @@
         }
     }
     &__ParallaxanimationFour{
-        width: 50%;
-        height: 50%;
+        width: 60%;
+        height: 60%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -436,8 +442,8 @@
         }
     }
     &__ParallaxanimationFive{
-        width: 50%;
-        height: 50%;
+        width: 60%;
+        height: 60%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -451,8 +457,8 @@
         }
     }
     &__ParallaxanimationSix{
-        width: 50%;
-        height: 50%;
+        width: 60%;
+        height: 60%;
         display: block;
         margin-left: auto;
         margin-right: auto;
