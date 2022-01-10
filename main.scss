@@ -373,6 +373,10 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        @include break.breakpoint(smartphone){
+            width: 100%;
+            height: 100%;
+        }
     }
     &__ParallaxanimationSecond{
         width: 50%;
@@ -380,6 +384,10 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        @include break.breakpoint(smartphone){
+            width: 100%;
+            height: 100%;
+        }
     }
     &__ParallaxanimationThrd{
         width: 50%;
@@ -387,6 +395,10 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        @include break.breakpoint(smartphone){
+            width: 100%;
+            height: 100%;
+        }
     }
     &__ParallaxanimationFour{
         width: 50%;
@@ -394,6 +406,10 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        @include break.breakpoint(smartphone){
+            width: 100%;
+            height: 100%;
+        }
     }
     &__ParallaxanimationFive{
         width: 50%;
@@ -401,6 +417,10 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        @include break.breakpoint(smartphone){
+            width: 100%;
+            height: 100%;
+        }
     }
     &__ParallaxanimationSix{
         width: 50%;
@@ -408,5 +428,9 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        @include break.breakpoint(smartphone){
+            width: 100%;
+            height: 100%;
+        }
     }
 }
