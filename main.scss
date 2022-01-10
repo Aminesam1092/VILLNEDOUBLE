@@ -223,7 +223,6 @@
             display: block;
             text-align: center;
             margin-left: auto;
-            margin-right: auto;
         }
     }
     &__Text{
@@ -261,6 +260,14 @@
         font-weight: 900;
         font-size: 25px;
         opacity: 0;
+    }
+}
+#graphic__Image{
+    width: 70%;
+    height: 70%;
+    @include break.breakpoint(smartphone){
+        width: 90%;
+        height: 90%;
     }
 }
 .Newline{
@@ -327,8 +334,8 @@
         opacity: 0;
         filter: drop-shadow(v.$BaseBoxShadow);
         @include break.breakpoint(smartphone){
-            width: 80%;
-            height: 80%;
+            width: 90%;
+            height: 90%;
         }
     }
     &__Productcontents{
