@@ -312,7 +312,6 @@
 }
 .Productconteiner{
     margin-top: 200px;
-    margin-bottom: 1000px;
     font-family: f.$FontFamily;
     display: flex;
     margin-left: 10%;
@@ -357,5 +356,56 @@
             text-align: center;
             margin: 20px;
         }
+    }
+}
+.PickUpConteiner{
+    font-family: f.$FontFamily;
+    margin-top: 154px;
+    &__Headingtext{
+        text-align: center;
+        font-size: f.$BaseHeadingFontSize;
+        font-weight: f.$TextFontWight;
+    }
+    &__ParallaxanimationFirst{
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__ParallaxanimationSecond{
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__ParallaxanimationThrd{
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__ParallaxanimationFour{
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__ParallaxanimationFive{
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__ParallaxanimationSix{
+        width: 50%;
+        height: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

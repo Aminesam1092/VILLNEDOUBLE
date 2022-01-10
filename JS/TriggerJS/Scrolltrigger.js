@@ -103,6 +103,3 @@ gsap.to(".Productconteiner__Text",{
     duraion: 5,
     opacity: 1,
 })
-
-
-
