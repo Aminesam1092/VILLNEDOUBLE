@@ -362,6 +362,7 @@
     font-family: f.$FontFamily;
     margin-top: 154px;
     &__Headingtext{
+        padding-bottom: 154px;
         text-align: center;
         font-size: f.$BaseHeadingFontSize;
         font-weight: f.$TextFontWight;
