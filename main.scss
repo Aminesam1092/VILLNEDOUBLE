@@ -382,8 +382,8 @@
         font-weight: f.$TextFontWight;
     }
     &__ParallaxanimationFirst{
-        width: 60%;
-        height: 60%;
+        width: 40%;
+        height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -397,8 +397,8 @@
         }
     }
     &__ParallaxanimationSecond{
-        width: 60%;
-        height: 60%;
+        width: 40%;
+        height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -412,8 +412,8 @@
         }
     }
     &__ParallaxanimationThrd{
-        width: 60%;
-        height: 60%;
+        width: 40%;
+        height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -427,8 +427,8 @@
         }
     }
     &__ParallaxanimationFour{
-        width: 60%;
-        height: 60%;
+        width: 40%;
+        height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -442,8 +442,8 @@
         }
     }
     &__ParallaxanimationFive{
-        width: 60%;
-        height: 60%;
+        width: 40%;
+        height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -457,8 +457,8 @@
         }
     }
     &__ParallaxanimationSix{
-        width: 60%;
-        height: 60%;
+        width: 40%;
+        height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -469,6 +469,23 @@
         @include break.breakpoint(tablet){
             width: 100%;
             height: 100%;
+        }
+    }
+}
+.LineUpconteiner__Elegantdress{
+    width: 100%;
+    font-family: f.$FontFamily;
+    display: flex;
+    .LineUpconteiner__Box{
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        .LineUpimage{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            &:hover{
+            }
         }
     }
 }
