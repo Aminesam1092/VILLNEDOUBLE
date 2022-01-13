@@ -63,9 +63,6 @@
     @include break.breakpoint(smartphone){
         display: none;
     }
-    @include break.breakpoint(tablet){
-        display: none;
-    }
 }
 .NEWSCAMPAINconteiner{
     width: 100%;
@@ -495,6 +492,39 @@
         margin-bottom: 200px;
         @include break.breakpoint(smartphone){
             display: block;
+
+        }
+        .LineUpconteiner__ElegantdressBox{
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            @include break.breakpoint(smartphone){
+                margin-bottom: 200px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .LineUpimage{
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                @include break.breakpoint(smartphone){
+                    display: block;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+            .LineUpimage:hover{
+                opacity: 0.5;
+            }
+            .LineUp__Name{
+                font-size: f.$BaseFontsize;
+                font-weight: f.$TextFontWight;
+            }
+            .LineUp__Place{
+                font-weight: f.$TextFontWight;
+                font-size: 1.5rem;
+            }
         }
         .LineUpconteiner__Box{
             width: 300px;
@@ -510,6 +540,7 @@
                 height: auto;
                 border-radius: 10px;
                 @include break.breakpoint(smartphone){
+                    display: block;
                     margin-top: 10px;
                     margin-bottom: 10px;
                 }
@@ -545,6 +576,24 @@
         margin: 0 auto;
         width: 60%;
         height: auto;
+    }
+}
+.Footer{
+    width: 100%;
+    font-family: f.$FontFamily;
+    font-size: 4rem;
+    line-height: f.$Baseline-height;
+    .VillNeDoubleLogo{
+        display: block;
+        margin: 0 auto;
+        width: 10%;
+        height: auto;
+    }
+    &__VillNeDoubleLogo{
+        margin-top: 500px;
+    }
+    &__text{
+        text-align: center;
     }
 }
 
