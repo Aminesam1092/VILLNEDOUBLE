@@ -472,20 +472,79 @@
         }
     }
 }
-.LineUpconteiner__Elegantdress{
+.LineUpconteiner{ 
     width: 100%;
     font-family: f.$FontFamily;
-    display: flex;
-    .LineUpconteiner__Box{
-        width: 200px;
-        height: 200px;
+    &__Headingtext{
         text-align: center;
-        .LineUpimage{
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-            &:hover{
+        font-size: f.$BaseHeadingFontSize;
+        font-weight: f.$TextFontWight;
+        opacity: 0;
+    }
+    .LineUpconteiner__Productext{
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: f.$BaseHeadingFontSize;
+        font-weight: f.$TextFontWight;
+    }
+    &__conteiner{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 200px;
+        @include break.breakpoint(smartphone){
+            display: block;
+        }
+        .LineUpconteiner__Box{
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            @include break.breakpoint(smartphone){
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .LineUpimage{
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                @include break.breakpoint(smartphone){
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+            .LineUpimage:hover{
+                opacity: 0.5;
+            }
+            .LineUp__Name{
+                font-size: f.$BaseFontsize;
+                font-weight: f.$TextFontWight;
+            }
+            .LineUp__Place{
+                font-weight: f.$TextFontWight;
+                font-size: 1.5rem;
             }
         }
     }
 }
+.DesignersFashionconteiner{
+    font-family: f.$FontFamily;
+    width: 100%;
+    height: 100vh;
+    @include break.breakpoint(smartphone){
+        display: none;
+    }
+    &__Headdingtext{
+        font-size: f.$BaseHeadingFontSize;
+        line-height: f.$Baseline-height;
+        text-align: center;
+    }
+    .DesignersLimage{
+        display: block;
+        margin: 0 auto;
+        width: 60%;
+        height: auto;
+    }
+}
+

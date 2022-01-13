@@ -5,7 +5,6 @@ const imageFour = document.querySelector('.PickUpConteiner__ParallaxanimationFou
 const imageFive = document.querySelector('.PickUpConteiner__ParallaxanimationFive');
 const imageSix = document.querySelector('.PickUpConteiner__ParallaxanimationSix');
 
-
 new simpleParallax(image);
 new simpleParallax(imageSecond);
 new simpleParallax(imageThrd);

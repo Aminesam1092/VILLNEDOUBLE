@@ -108,9 +108,21 @@ gsap.to(".PickUpConteiner__Headingtext",{
     scrollTrigger: {
         trigger: ".PickUpConteiner__Headingtext",
         start: "top center",
-        end: '+=2000',
+        end: '+=1500',
         scrub: true,
         pin: true,
     },
     opacity: 1,
 });
+
+gsap.to(".LineUpconteiner__Headingtext",{
+    scrollTrigger: {
+        trigger: ".LineUpconteiner__Headingtext",
+        start: "top center",
+        end: '+=1500',
+        scrub: true,
+        pin: true,
+    },
+    opacity: 1,
+});
+
