@@ -126,3 +126,14 @@ gsap.to(".LineUpconteiner__Headingtext",{
     opacity: 1,
 });
 
+gsap.to(".Footer",{
+    scrollTrigger: {
+        trigger: ".Footer",
+        start: "top center",
+        end: '+=2000',
+        scrub: true,
+        pin: true,
+    },
+    opacity: 1,
+});
+
