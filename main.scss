@@ -1,10 +1,10 @@
-@use "scss/foundation/variables" as v;
-@use "scss/foundation/base" as b;
-@use "scss/foundation/font" as f;
-@use "scss/Animation/Animation.scss" as a;
-@use "scss/Animation/TextAnimation.scss" as t;
-@use "scss/mixin/breakpoint" as break;
-.Header{
+@use "scss/foundation/variables"as v;
+@use "scss/foundation/base"as b;
+@use "scss/foundation/font"as f;
+@use "scss/Animation/Animation.scss"as a;
+@use "scss/Animation/TextAnimation.scss"as t;
+@use "scss/mixin/breakpoint"as break;
+.Header {
     width: 100%;
     padding-top: 20px;
     margin-bottom: 20px;
@@ -13,22 +13,93 @@
     display: flex;
     justify-content: center;
     font-family: f.$FontFamily;
-    &__LogoImage{
+    @include break.breakpoint(tablet) {
+        padding-top: 10px;
+        margin-bottom: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 1px 50px rgb(255, 255, 255, 0.5);
+        z-index: 10;
+    }
+    @include break.breakpoint(smartphone) {
+        padding-top: 10px;
+        margin-bottom: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 1px 50px rgb(255, 255, 255, 0.5);
+        z-index: 10;
+    }
+
+    &__LogoImage {
         min-width: 0;
         margin: 0 auto 0 40px;
+        @include break.breakpoint(tablet) {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        @include break.breakpoint(smartphone) {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
     }
-    &__Menu{
+
+    &__Menu {
         min-width: 0;
         display: flex;
         font-size: f.$BaseTextSize;
         margin-top: 20px;
+
+        @include break.breakpoint(tablet) {
+            width: 70%;
+            height: calc(100vh - 78px);
+            position: fixed;
+            top: 77px;
+            left: -70%;
+            z-index: 5;
+            margin-top: 0;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 1px 0px 100px rgba(255, 255, 255, 0.5);
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            gap: 50px;
+            transition: .5s ease-in-out;
+        }
+
+        @include break.breakpoint(smartphone) {
+            width: 70%;
+            height: calc(100vh - 78px);
+            position: fixed;
+            top: 77px;
+            left: -70%;
+            z-index: 5;
+            margin-top: 0;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 1px 0px 100px rgb(255, 255, 255, 0.5);
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            gap: 50px;
+            transition: .5s ease-in-out;
+        }
     }
-    &__List{
+
+    &__List {
         margin: 0 10px;
         cursor: pointer;
         list-style-type: none;
     }
-    &__Snslink{
+
+    &__Snslink {
         min-width: 0;
         height: 20px;
         font-size: 12px;
@@ -38,7 +109,11 @@
         display: flex;
         list-style-type: none;
         align-items: center;
-        &__Border{
+        @include break.breakpoint(tablet) {
+            display: none;
+        }
+
+        &__Border {
             cursor: pointer;
             width: 100px;
             height: 20px;
@@ -46,99 +121,226 @@
             text-align: center;
             border-right: 1px solid v.$Color__Main__Black;
         }
-        &--Instagram{
+
+        &--Instagram {
             height: 20px;
             margin-left: 20px;
             display: inline-block;
         }
     }
-    .Header__Hambugur{
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
+    .menuWrapper {
+        display: none;
+        @include break.breakpoint(smartphone) {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            top: 0;
+            right: 20px;
+        }
+        @include break.breakpoint(tablet) {
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            top: 0;
+            right: 20px;
+        }
     }
+
+    .menuButton {
+        display: block;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .menuButton span,
+    .menuButton::before,
+    .menuButton::after {
+        display: block;
+        width: 36px;
+        height: 4px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        margin: auto;
+        position: absolute;
+    }
+
+    .menuButton span {
+        overflow: hidden;
+        color: #000;
+        opacity: 0;
+    }
+
+    .menuButton::before {
+        content: "";
+    }
+
+    .menuButton::after {
+        content: "";
+        transform: translateY(12px);
+    }
+
+    .menuButton span,
+    .menuButton::before,
+    .menuButton::after {
+        transition: transform 0.3s;
+    }
+    .menuButton.active::before {
+        transform: rotate(45deg) translateY(0px);
+        //transform: translateY(5px);
+    }
+
+    .menuButton.active::after {
+        transform: rotate(-45deg) translateY(12px) translateX(-7px);
+        //transform: translateY(-5px);
+    }
+
+
 }
-.swiper-container{
+
+.swiper-container {
     margin-top: 30px;
-    @include break.breakpoint(smartphone){
+
+    @include break.breakpoint(smartphone) {
         display: none;
     }
+    @include break.breakpoint(tablet) {
+        margin-top: 100px;
+    }
+
 }
-.NEWSCAMPAINconteiner{
+
+.NEWSCAMPAINconteiner {
     width: 100%;
     margin-top: 290px;
-    transition:  a.$FeedAnimation;
+    transition: a.$FeedAnimation;
     font-family: f.$FontFamily;
     opacity: 0;
-    @include break.breakpoint(smartphone){
+
+    @include break.breakpoint(smartphone) {
         margin-top: 70px;
+        padding-top: 58px;
         opacity: 1;
     }
-    &__Explanation{
-        @include break.breakpoint(smartphone){
+    @include break.breakpoint(tablet) {
+        margin-top: 70px;
+        padding-top: 58px;
+    }
+
+    &__Explanation {
+        @include break.breakpoint(smartphone) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+        }
+
+        @include break.breakpoint(tablet) {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-flow: column;
         }
     }
-    &__Headingtext{
+
+    &__Headingtext {
         font-size: 5rem;
         font-weight: f.$BaseFontWight;
         margin-left: 18%;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 80%;
             font-size: 33px;
             margin-left: 0;
             text-align: center;
         }
+
+        @include break.breakpoint(tablet) {
+            display: block;
+            margin-left: 0;
+            text-align: center;
+        }
     }
-    &__Logo{
+
+    &__Logo {
         width: 282px;
         margin-top: 63px;
         margin-left: 18%;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 50%;
             margin-top: 25px;
             margin-left: 0;
             margin-bottom: 25px;
         }
+
+        @include break.breakpoint(tablet) {
+            display: block;
+            margin: 0 auto;
+        }
     }
-    &__Text{
+
+    &__Text {
         display: inline-block;
         font-size: f.$BaseFontsize;
         line-height: f.$Baseline-height;
         font-weight: f.$BaseFontWight;
         padding-top: 12px;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             font-size: f.$ResponsiveFontSize;
         }
     }
-    &__Amendment{
+
+    &__Amendment {
         margin-left: 18%;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 80%;
             text-align: center;
             margin-left: 0;
         }
+
+        @include break.breakpoint(tablet) {
+            margin-left: 0;
+        }
     }
-    &__Time{
+
+    &__Time {
         display: block;
         margin-top: 10px;
         margin-left: 18%;
         font-size: f.$BaseTextSize;
         font-weight: f.$BaseFontWight;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 80%;
             text-align: center;
             margin-left: 0;
             font-size: f.$ResponsiveFontSize;
         }
+
+        @include break.breakpoint(tablet) {
+            margin-left: 0;
+        }
     }
-    &__Newline{
+
+    &__Newline {
         display: inline-block;
+
+        @include break.breakpoint(tablet) {
+            display: block;
+        }
     }
-     &__Button{
+
+    &__Button {
         width: 290px;
         height: 70px;
         display: block;
@@ -154,33 +356,48 @@
         font-weight: f.$BaseFontWight;
         border: v.$BaseBorder;
         font-size: f.$BaseTextSize;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             margin-top: 25px;
         }
-        &:hover{
+
+        &:hover {
             background-color: rgb(0, 0, 0);
             box-shadow: 0px 0px 20px rgb(0, 0, 0);
-            border-radius: 50px;
+            border-radius: 25px;
             color: white;
         }
     }
 }
-.OURSTORY__Headingtext{
-        width: 150px;
-        margin-top: 200px;
-        margin-left: 18%;
-        font-family: f.$FontFamily;
-        font-size: f.$BaseHeadingFontSize;
-        font-weight: f.$BaseFontWight;
-        opacity: 0;
-        @include break.breakpoint(smartphone){
-            width: 100%;
-            text-align: center;
-            margin-left: 0;
-            margin-top: 25px;
-        }
+
+.OURSTORY__Headingtext {
+    width: 100%;
+    margin-top: 200px;
+    margin-left: 18%;
+    overflow: visible;
+    font-family: f.$FontFamily;
+    font-size: f.$BaseHeadingFontSize;
+    font-weight: f.$BaseFontWight;
+    opacity: 0;
+
+    @include break.breakpoint(smartphone) {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 25px;
+        overflow: visible;
+    }
+
+    @include break.breakpoint(tablet) {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 25px;
+        overflow: visible;
+    }
 }
-.OURSTORY__Catchcopy{
+
+.OURSTORY__Catchcopy {
     margin-top: 100px;
     margin-bottom: 100px;
     margin-left: 18%;
@@ -189,82 +406,137 @@
     font-family: f.$FontFamily;
     line-height: f.$Baseline-height;
     opacity: 0;
-    @include break.breakpoint(smartphone){
+
+    @include break.breakpoint(smartphone) {
         width: 100%;
         text-align: center;
         margin-left: 0;
         margin-top: 200px;
         font-size: 25px;
     }
-    .Catchcopynewline{
+
+    @include break.breakpoint(tablet) {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 200px;
+        font-size: 25px;
+    }
+
+    .Catchcopynewline {
         display: block;
         margin-top: 50px;
-        @include break.breakpoint(tablet){
+
+        @include break.breakpoint(tablet) {
             margin-top: 20px;
             font-size: 30px;
         }
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             margin-top: 30px;
         }
     }
 }
-.OURSTORYconteiner{
+
+.OURSTORYconteiner {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     font-family: f.$FontFamily;
-    &__Twocontents{
+
+    &__Twocontents {
         display: flex;
         opacity: 0;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             display: block;
         }
-        @include break.breakpoint(tablet){
+
+        @include break.breakpoint(tablet) {
             display: block;
         }
     }
-    &___Rightconteiner{
+
+    &___Rightconteiner {
         width: 100%;
     }
-    &__Catchimage{
+
+    &__Catchimage {
         filter: drop-shadow(v.$BaseBoxShadow);
         margin-left: v.$TextMargin;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             display: block;
             text-align: center;
             margin-left: auto;
         }
+
+        @include break.breakpoint(tablet) {
+            display: block;
+            text-align: center;
+            margin-left: 0;
+        }
     }
-    &__Text{
+
+    &__Text {
         padding-top: 20px;
         font-weight: f.$TextFontWight;
         margin-left: v.$TextMargin;
         font-size: f.$BaseFontsize;
-        &--Second{
+
+        &--Second {
             padding-top: 20px;
             font-weight: f.$TextFontWight;
             margin-left: v.$TextMargin;
             font-size: f.$BaseFontsize;
-            @include break.breakpoint(smartphone){
+
+            @include break.breakpoint(smartphone) {
                 text-align: center;
                 padding: 0;
                 margin: 20px;
                 font-weight: f.$TextFontWight;
             }
+
+            @include break.breakpoint(tablet) {
+                display: block;
+                text-align: center;
+                margin-left: 0;
+            }
         }
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             text-align: center;
             padding-top: 100px;
             margin: 20px;
             font-weight: f.$TextFontWight;
         }
+
+        @include break.breakpoint(tablet) {
+            display: block;
+            text-align: center;
+            margin-left: 0;
+        }
     }
-    &__Logo{
+
+    &__Logo {
         width: 100%;
         padding-top: 60%;
         opacity: 0;
+
+        @include break.breakpoint(smartphone) {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @include break.breakpoint(tablet) {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
     }
-    &__Establishedtime{
+
+    &__Establishedtime {
         text-align: center;
         font-family: f.$FontFamily;
         font-weight: 900;
@@ -272,249 +544,322 @@
         opacity: 0;
     }
 }
-#graphic__Image{
+
+#graphic__Image {
     width: 70%;
     height: 70%;
-    @include break.breakpoint(smartphone){
+
+    @include break.breakpoint(smartphone) {
         width: 90%;
         height: 90%;
     }
 }
-.Newline{
+
+.Newline {
     display: block;
 }
-.OURSTORYconteiner__Brandeintroductory{
+
+.OURSTORYconteiner__Brandeintroductory {
     width: 100%;
     margin-top: 50px;
     display: flex;
     opacity: 0;
-    &__Lefbox{
+
+    &__Lefbox {
         text-align: center;
         width: 800px;
         margin-top: 10%;
         margin-left: 10%;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             margin-left: 0;
         }
     }
-    &__Brandename{
+
+    &__Brandename {
         display: block;
         text-align: center;
         font-size: f.$BaseHeadingFontSize;
         font-weight: f.$TextFontWight;
         opacity: 0;
     }
-    &__Text{
+
+    &__Text {
         margin-top: 15%;
         text-align: left;
         font-size: f.$BaseFontsize;
         font-weight: f.$TextFontWight;
         opacity: 0;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             font-size: f.$ResponsiveFontSize;
             text-align: center;
             margin: 20px;
             font-weight: f.$TextFontWight;
         }
+
+        @include break.breakpoint(tablet) {
+            display: block;
+            text-align: center;
+        }
     }
 }
-.OURSTORYconteiner__Catchsecondimage{
+
+.OURSTORYconteiner__Catchsecondimage {
     filter: drop-shadow(v.$BaseBoxShadow);
     width: 600px;
     height: 100%;
     margin-left: 10%;
-    @include break.breakpoint(smartphone){
+
+    @include break.breakpoint(smartphone) {
         display: none;
     }
-    @include break.breakpoint(tablet){
+
+    @include break.breakpoint(tablet) {
         display: none;
     }
 }
-.Productconteiner{
+
+.Productconteiner {
     margin-top: 200px;
     font-family: f.$FontFamily;
     display: flex;
     margin-left: 10%;
-    @include break.breakpoint(smartphone){
+
+    @include break.breakpoint(smartphone) {
         display: block;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
-    &__Image{
+
+    @include break.breakpoint(tablet) {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    &__Image {
         width: 30%;
         height: 30%;
+        margin-top: 60px;
         opacity: 0;
         filter: drop-shadow(v.$BaseBoxShadow);
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 90%;
             height: 90%;
         }
+
+        @include break.breakpoint(tablet) {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
     }
-    &__Productcontents{
+
+    &__Productcontents {
         margin-left: 5%;
         padding-top: 50px;
+
+        @include break.breakpoint(tablet) {
+            display: block;
+            margin-left: 0;
+        }
     }
-    &__Headingtext{
+
+    &__Headingtext {
         font-size: f.$BaseFontsize;
         font-weight: f.$TextFontWight;
     }
-    &__Catchcopy{
+
+    &__Catchcopy {
         font-size: f.$BaseHeadingFontSize;
         font-weight: f.$TextFontWight;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             font-size: 35px;
         }
     }
-    &__Text{
+
+    &__Text {
         padding-top: 50px;
         font-size: f.$BaseFontsize;
         font-weight: f.$TextFontWight;
         opacity: 0;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             font-size: f.$ResponsiveFontSize;
             text-align: center;
             margin: 20px;
         }
     }
 }
-.PickUpConteiner{
+
+.PickUpConteiner {
     font-family: f.$FontFamily;
     margin-top: 154px;
-    &__Headingtext{
+
+    &__Headingtext {
         opacity: 0;
         padding-bottom: 154px;
         text-align: center;
         font-size: f.$BaseHeadingFontSize;
         font-weight: f.$TextFontWight;
     }
-    &__ParallaxanimationFirst{
+
+    &__ParallaxanimationFirst {
         width: 40%;
         height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 100%;
             height: 100%;
         }
-        @include break.breakpoint(tablet){
+
+        @include break.breakpoint(tablet) {
             width: 100%;
             height: 100%;
         }
     }
-    &__ParallaxanimationSecond{
+
+    &__ParallaxanimationSecond {
         width: 40%;
         height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 100%;
             height: 100%;
         }
-        @include break.breakpoint(tablet){
+
+        @include break.breakpoint(tablet) {
             width: 100%;
             height: 100%;
         }
     }
-    &__ParallaxanimationThrd{
+
+    &__ParallaxanimationThrd {
         width: 40%;
         height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 100%;
             height: 100%;
         }
-        @include break.breakpoint(tablet){
+
+        @include break.breakpoint(tablet) {
             width: 100%;
             height: 100%;
         }
     }
-    &__ParallaxanimationFour{
+
+    &__ParallaxanimationFour {
         width: 40%;
         height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 100%;
             height: 100%;
         }
-        @include break.breakpoint(tablet){
+
+        @include break.breakpoint(tablet) {
             width: 100%;
             height: 100%;
         }
     }
-    &__ParallaxanimationFive{
+
+    &__ParallaxanimationFive {
         width: 40%;
         height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 100%;
             height: 100%;
         }
-        @include break.breakpoint(tablet){
+
+        @include break.breakpoint(tablet) {
             width: 100%;
             height: 100%;
         }
     }
-    &__ParallaxanimationSix{
+
+    &__ParallaxanimationSix {
         width: 40%;
         height: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 100%;
             height: 100%;
         }
-        @include break.breakpoint(tablet){
+
+        @include break.breakpoint(tablet) {
             width: 100%;
             height: 100%;
         }
     }
 }
-.LineUpconteiner{ 
+
+.LineUpconteiner {
     width: 100%;
     font-family: f.$FontFamily;
-    &__Headingtext{
+
+    &__Headingtext {
         text-align: center;
         font-size: f.$BaseHeadingFontSize;
         font-weight: f.$TextFontWight;
         opacity: 0;
     }
-    .LineUpconteiner__Productext{
+
+    .LineUpconteiner__Productext {
         text-align: center;
         margin-top: 100px;
         margin-bottom: 100px;
         font-size: f.$BaseHeadingFontSize;
         font-weight: f.$TextFontWight;
     }
-    &__conteiner{
+
+    &__conteiner {
         width: 100%;
         display: flex;
         justify-content: space-around;
         margin-bottom: 200px;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             display: block;
 
         }
-        .LineUpconteiner__ElegantdressBox{
+
+        .LineUpconteiner__ElegantdressBox {
             width: 300px;
             height: 300px;
             text-align: center;
-            @include break.breakpoint(smartphone){
+
+            @include break.breakpoint(smartphone) {
                 margin-bottom: 200px;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
-            .LineUpimage{
+
+            .LineUpimage {
                 width: 100%;
                 height: auto;
                 border-radius: 10px;
@@ -522,7 +867,8 @@
                 -moz-transition: all 0.3s ease;
                 -o-transition: all 0.3s ease;
                 transition: all 0.3s ease;
-                @include break.breakpoint(smartphone){
+
+                @include break.breakpoint(smartphone) {
                     display: block;
                     margin-top: 10px;
                     margin-bottom: 10px;
@@ -532,29 +878,35 @@
                     transition: all 0.3s ease;
                 }
             }
-            .LineUpimage:hover{
-                opacity: 0.75;
+
+            .LineUpimage:hover {
+                transform: scale(1.1) translateY(-10px);
                 border-radius: 50px;
             }
-            .LineUp__Name{
+
+            .LineUp__Name {
                 font-size: f.$BaseFontsize;
                 font-weight: f.$TextFontWight;
             }
-            .LineUp__Place{
+
+            .LineUp__Place {
                 font-weight: f.$TextFontWight;
                 font-size: 1.5rem;
             }
         }
-        .LineUpconteiner__Box{
+
+        .LineUpconteiner__Box {
             width: 300px;
             height: 300px;
             text-align: center;
-            @include break.breakpoint(smartphone){
+
+            @include break.breakpoint(smartphone) {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
-            .LineUpimage{
+
+            .LineUpimage {
                 width: 100%;
                 height: auto;
                 border-radius: 10px;
@@ -562,7 +914,8 @@
                 -moz-transition: all 0.3s ease;
                 -o-transition: all 0.3s ease;
                 transition: all 0.3s ease;
-                @include break.breakpoint(smartphone){
+
+                @include break.breakpoint(smartphone) {
                     display: block;
                     margin-top: 10px;
                     margin-bottom: 10px;
@@ -572,62 +925,77 @@
                     transition: all 0.3s ease;
                 }
             }
-            .LineUpimage:hover{
+
+            .LineUpimage:hover {
                 opacity: 0.75;
                 border-radius: 50px;
             }
-            .LineUp__Name{
+
+            .LineUp__Name {
                 font-size: f.$BaseFontsize;
                 font-weight: f.$TextFontWight;
             }
-            .LineUp__Place{
+
+            .LineUp__Place {
                 font-weight: f.$TextFontWight;
                 font-size: 1.5rem;
             }
         }
     }
 }
-.DesignersFashionconteiner{
+
+.DesignersFashionconteiner {
     font-family: f.$FontFamily;
     width: 100%;
     height: 100vh;
-    @include break.breakpoint(smartphone){
+
+    @include break.breakpoint(smartphone) {
         display: none;
     }
-    &__Headdingtext{
+
+    &__Headdingtext {
         font-size: f.$BaseHeadingFontSize;
         line-height: f.$Baseline-height;
         text-align: center;
     }
-    .DesignersLimage{
+
+    .DesignersLimage {
         display: block;
         margin: 0 auto;
         width: 60%;
         height: auto;
     }
 }
-.Footer{
+
+.Footer {
     width: 100%;
     font-family: f.$FontFamily;
     font-size: 2rem;
     line-height: f.$Baseline-height;
     opacity: 0;
-    @include break.breakpoint(smartphone){
+
+    @include break.breakpoint(smartphone) {
         display: block;
         width: 100%;
     }
-    .VillNeDoubleLogo{
+
+    .VillNeDoubleLogo {
         display: block;
         margin: 0 auto;
         width: 10%;
         height: auto;
-        @include break.breakpoint(smartphone){
+
+        @include break.breakpoint(smartphone) {
             width: 50%;
         }
     }
-    &__text{
+
+    &__text {
         margin-top: 25px;
         text-align: center;
     }
 }
 
+.JS_Menu {
+    transform: translateX(100%);
+}
