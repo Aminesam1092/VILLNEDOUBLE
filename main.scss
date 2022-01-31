@@ -20,7 +20,7 @@
         top: 0;
         left: 0;
         background-color: white;
-        box-shadow: 0px 1px 50px rgb(255, 255, 255, 0.5);
+        box-shadow: 0 15px 10px 0 rgb(0 0 0 / 30%);
         z-index: 10;
     }
     @include break.breakpoint(smartphone) {
@@ -30,7 +30,7 @@
         top: 0;
         left: 0;
         background-color: white;
-        box-shadow: 0px 1px 50px rgb(255, 255, 255, 0.5);
+        box-shadow: 0 15px 10px 0 rgb(0 0 0 / 30%);
         z-index: 10;
     }
 
