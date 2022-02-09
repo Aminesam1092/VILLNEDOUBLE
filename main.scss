@@ -573,6 +573,11 @@
 
         @include break.breakpoint(smartphone) {
             margin-left: 0;
+            margin-left: 0;
+        }
+        @include break.breakpoint(tablet) {
+            margin-left: 0;
+            margin-left: 0;
         }
     }
 
